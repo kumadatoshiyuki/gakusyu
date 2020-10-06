@@ -1,0 +1,10 @@
+<h1>熊田の日記帳</h1>
+
+<% @books.each do |book| %>
+<p>タイトル</p>
+<span>
+  <%= link_to book.title, toukoulist_path(book.id) %>
+  </span>
+  <p>画像だよ</p>
+  <%= attachment_image_tag book, :image, :fill, 100, 100, format: 'jpeg' %>
+<% end %>

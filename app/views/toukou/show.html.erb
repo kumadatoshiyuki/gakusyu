@@ -1,0 +1,9 @@
+<h2>内容は</h2>
+<p><%= @book.title %></p>
+<h2>こちら！！！</h2>
+<p><%= @book.body %></p>
+<h2></h2>
+<%=attachment_image_tag @book, :image, :fill, 300, 300, format: 'jpeg' %>
+
+<%= link_to "編集はこちら", edit_toukoulist_path(@book.id) %>
+<%= link_to "削除はこっち", destroy_toukoulist_path(@book.id), method: :delete, "data-confirm" => "本当に消しちゃうの？" %>
